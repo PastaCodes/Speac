@@ -14,6 +14,7 @@ public final class LogUtils {
 	static {
 		LOGGER = Logger.getLogger("Speac Logger");
 
+		/* TODO
 		FileHandler handler = null;
 		try {
 			handler = new FileHandler(LogUtils.LOG_FILE_PATH.toString());
@@ -23,5 +24,6 @@ public final class LogUtils {
 
 		SimpleFormatter formatter = new SimpleFormatter();
 		handler.setFormatter(formatter);
+		*/
 	}
 }
