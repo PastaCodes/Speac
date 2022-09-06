@@ -1,2 +1,0 @@
-set 06, 2022 3:33:34 PM org.speac.ui.internal.StylesheetLoader logDiscardedStylesheet
-WARNING: Discarded the stylesheet at path 'src\main\resources\stylesheets\light.json', reason: no value 'token-style' was found.
