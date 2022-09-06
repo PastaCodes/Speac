@@ -1,0 +1,47 @@
+{
+  "background-color": "#282C35",
+  "borders-color":    "#323641",
+  "foreground-color": "#ABB2BF",
+  "notes-color":      "#59626F",
+
+  "errors-style": {
+    "color": "#F44747"
+  },
+  "error-highlights-style": {
+    "color": "#D19A66"
+  },
+  "console-style": {
+    "color": "#ABB2BF"
+  },
+  "hud-style": {
+    "color": "#59626F"
+  },
+
+  "token-style": {
+    "function-name": {
+      "color": "#61AEEF"
+    },
+    "immediate-value": {
+      "color": "#D19A66"
+    },
+    "string": {
+      "color": "#98C379"
+    },
+    "string-argument": {
+      "color": "#E5C17C",
+      "italic": true
+    },
+    "symbol": {
+      "color": "#ABB2BF"
+    },
+    "variable-name": {
+      "color": "#E06C75"
+    },
+    "error": {
+      "color": "#F44747"
+    },
+    "default": {
+      "color": "#59626F"
+    }
+  }
+}

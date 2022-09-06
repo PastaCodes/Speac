@@ -1,0 +1,51 @@
+plugins {
+	id 'java'
+	id 'de.jjohannes.extra-java-module-info' version '0.6'
+	id 'org.beryx.jlink' version '2.25.0'
+}
+
+group 'org.speac'
+version '0.0'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+}
+
+extraJavaModuleInfo {
+	module('json-simple-1.1.1.jar', 'json.simple', '1.1.1') {
+		exports 'org.json.simple'
+		exports 'org.json.simple.parser'
+	}
+	automaticModule('junit-4.10.jar', 'junit')
+	automaticModule('hamcrest-core-1.1.jar', 'hamcrest.core')
+}
+
+application {
+	mainModule = 'speac'
+	mainClass = 'org.speac.Start'
+}
+
+jar {
+	processResources.exclude('*')
+}
+
+tasks.jpackage.doFirst {
+	copy {
+		from('/src/main/resources') {
+			files().forEach {
+				include it
+			}
+		}
+		into "$buildDir/jpackage/Speac/resources"
+	}
+}
+
+jlink {
+	jpackage {
+		imageOptions = [ '--icon', 'src/main/build_resources/logo.ico', ]
+	}
+}
